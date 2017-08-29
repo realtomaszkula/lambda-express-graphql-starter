@@ -1,0 +1,3 @@
+functionName: DoctorWorkExperienceGraphql
+s3Bucket: zet-lambda-upload
+s3Key: final.zip

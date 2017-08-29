@@ -1,0 +1,35 @@
+{
+  "name": "zet-aws-lambda-express-graphql-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "publish": "ts-node scripts/publish.ts"
+  },
+  "keywords": [],
+  "author": "Tomasz Kula",
+  "license": "ISC",
+  "dependencies": {
+    "aws-serverless-express": "*",
+    "dataloader": "*",
+    "express": "*",
+    "express-graphql": "*",
+    "pg-promise": "*"
+  },
+  "devDependencies": {
+    "@types/express-graphql": "*",
+    "@types/aws-lambda": "*",
+    "@types/aws-serverless-express": "*",
+    "@types/express": "*",
+    "@types/node": "*",
+    "@types/pg-promise": "*",
+    "@types/chalk": "*",
+    "@types/yamljs": "*",
+    "@types/graphql": "*",
+    "ts-node": "*",
+    "typescript": "*",
+    "chalk": "*",
+    "yamljs": "*"
+  }
+}
