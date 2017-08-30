@@ -5,8 +5,7 @@ import { options, IExtensions } from './options';
 
 export * from './loaders';
 export * from './options';
-
-type Database = IDatabase<IExtensions> & IExtensions;
+export type Database = IDatabase<IExtensions> & IExtensions;
 
 const pgp: IMain = pgPromise(options);
 export const db = pgp<IExtensions>(config);
