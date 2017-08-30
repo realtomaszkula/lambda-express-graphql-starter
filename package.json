@@ -6,6 +6,9 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint --config tslint.json .",
+    "precommit": "npm run lint",
+    "prepush": "npm run lint",
+    "prepublish": "npm run lint",
     "publish": "ts-node scripts/publish.ts"
   },
   "keywords": [],
@@ -29,6 +32,7 @@
     "@types/pg-promise": "*",
     "@types/yamljs": "*",
     "chalk": "*",
+    "husky": "*",
     "ts-lint": "*",
     "ts-node": "*",
     "typescript": "*",
