@@ -7,7 +7,7 @@
     "build": "tsc",
     "lint": "tslint --config tslint.json .",
     "start": "nodemon --config local/nodemon.json",
-    "test": "jest --bail",
+    "test": "jest --bail --forceExit",
     "test:watch": "jest --bail --watch",
     "precommit": "npm run lint",
     "prepush": "npm run lint && npm run test",
