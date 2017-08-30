@@ -7,11 +7,11 @@
     "build": "tsc",
     "lint": "tslint --config tslint.json .",
     "start": "nodemon --config local/nodemon.json",
-    "test" : "jest --bail",
-    "test:watch" : "jest --bail --watch",
+    "test": "jest --bail",
+    "test:watch": "jest --bail --watch",
     "precommit": "npm run lint",
-    "prepush": "npm run lint",
-    "prepublish": "npm run lint",
+    "prepush": "npm run lint && npm run test",
+    "prepublish": "npm run lint && npm run test",
     "publish": "ts-node scripts/publish.ts"
   },
   "keywords": [],
@@ -29,19 +29,19 @@
     "@types/aws-lambda": "*",
     "@types/aws-serverless-express": "*",
     "@types/chalk": "*",
-    "@types/dotenv": "^4.0.1",
+    "@types/dotenv": "*",
     "@types/express": "*",
     "@types/express-graphql": "*",
     "@types/graphql": "*",
-    "@types/jest": "^20.0.8",
+    "@types/jest": "*",
     "@types/node": "*",
     "@types/pg-promise": "*",
     "@types/yamljs": "*",
     "chalk": "*",
-    "dotenv": "^4.0.0",
+    "dotenv": "*",
     "husky": "*",
-    "jest": "^20.0.4",
-    "ts-jest": "^20.0.13",
+    "jest": "*",
+    "ts-jest": "*",
     "ts-lint": "*",
     "ts-node": "*",
     "typescript": "*",
@@ -60,6 +60,11 @@
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/(?!@tomaszk)"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/test/setupJest.ts"
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setupJest.ts",
+    "globals": {
+      "ts-jest": {
+        "tsConfigFile": "test/tsconfig.spec.json"
+      }
+    }
   }
 }
