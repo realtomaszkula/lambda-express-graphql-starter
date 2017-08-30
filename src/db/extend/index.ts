@@ -1,4 +1,6 @@
 import { LanguageRepository } from './languages.repository';
+
+export * from './languages.repository';
 export interface IExtensions {
   languages: LanguageRepository;
 }

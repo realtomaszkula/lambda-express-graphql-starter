@@ -14,6 +14,13 @@ export interface LanguageUpdateParams {
   languageName: string;
 }
 
+const existsSQL = `
+SELECT EXISTS(
+  SELECT 1
+  FROM languages
+  WHERE language_id = $1
+)
+`;
 
 const indexSQL = `
   SELECT *
@@ -36,15 +43,15 @@ const updateSQL = `
   UPDATE languages
   SET
     language_name = $[languageName]
-  WHERE langauge_id = $[languageId]
+  WHERE language_id = $[languageId]
   RETURNING *
 `;
 
 const destroySQL = `
   DELETE
-  FROM langauges
+  FROM languages
   WHERE language_id = $1
-  RETUNRING language_id;
+  RETURNING language_id;
 `;
 
 export class LanguageRepository {
@@ -53,6 +60,11 @@ export class LanguageRepository {
 
   index = async (): Promise<Language[]> => {
     return this.db.manyOrNone(indexSQL);
+  }
+
+  exists = async (id: number): Promise<boolean> => {
+    const { exists } = await this.db.one(existsSQL, id);
+    return exists;
   }
 
   findById = async (id: number): Promise<Language> => {
