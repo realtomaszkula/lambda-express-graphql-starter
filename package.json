@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint --config tslint.json .",
+    "start": "nodemon --config local/nodemon.json",
     "precommit": "npm run lint",
     "prepush": "npm run lint",
     "prepublish": "npm run lint",
@@ -19,12 +20,14 @@
     "dataloader": "*",
     "express": "*",
     "express-graphql": "*",
+    "graphql": "*",
     "pg-promise": "*"
   },
   "devDependencies": {
     "@types/aws-lambda": "*",
     "@types/aws-serverless-express": "*",
     "@types/chalk": "*",
+    "@types/dotenv": "^4.0.1",
     "@types/express": "*",
     "@types/express-graphql": "*",
     "@types/graphql": "*",
@@ -32,6 +35,7 @@
     "@types/pg-promise": "*",
     "@types/yamljs": "*",
     "chalk": "*",
+    "dotenv": "^4.0.0",
     "husky": "*",
     "ts-lint": "*",
     "ts-node": "*",
