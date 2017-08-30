@@ -7,6 +7,8 @@
     "build": "tsc",
     "lint": "tslint --config tslint.json .",
     "start": "nodemon --config local/nodemon.json",
+    "test" : "jest --bail",
+    "test:watch" : "jest --bail --watch",
     "precommit": "npm run lint",
     "prepush": "npm run lint",
     "prepublish": "npm run lint",
@@ -31,15 +33,33 @@
     "@types/express": "*",
     "@types/express-graphql": "*",
     "@types/graphql": "*",
+    "@types/jest": "^20.0.8",
     "@types/node": "*",
     "@types/pg-promise": "*",
     "@types/yamljs": "*",
     "chalk": "*",
     "dotenv": "^4.0.0",
     "husky": "*",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.13",
     "ts-lint": "*",
     "ts-node": "*",
     "typescript": "*",
     "yamljs": "*"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!@tomaszk)"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setupJest.ts"
   }
 }
