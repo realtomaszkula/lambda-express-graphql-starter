@@ -18,9 +18,12 @@
   "author": "Tomasz Kula",
   "license": "ISC",
   "dependencies": {
+    "@types/body-parser": "^1.16.5",
+    "@types/cors": "^2.8.1",
     "aws-serverless-express": "*",
+    "body-parser": "^1.17.2",
     "dataloader": "*",
-    "express": "*",
+    "express": "^4.15.4",
     "express-graphql": "*",
     "graphql": "*",
     "pg-promise": "*"
