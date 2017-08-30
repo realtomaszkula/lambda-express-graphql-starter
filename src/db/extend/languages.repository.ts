@@ -28,15 +28,15 @@ const findByIdSQL = `
 
 const createSQL = `
   INSERT INTO languages (language_name)
-  VALUES ($[language_name])
+  VALUES ($[languageName])
   RETURNING *
 `;
 
 const updateSQL = `
   UPDATE languages
   SET
-    language_name = $[language_name]
-  WHERE langauge_id = $[language_id]
+    language_name = $[languageName]
+  WHERE langauge_id = $[languageId]
   RETURNING *
 `;
 
