@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "lint": "tslint --config tslint.json .",
     "publish": "ts-node scripts/publish.ts"
   },
   "keywords": [],
@@ -18,18 +19,19 @@
     "pg-promise": "*"
   },
   "devDependencies": {
-    "@types/express-graphql": "*",
     "@types/aws-lambda": "*",
     "@types/aws-serverless-express": "*",
+    "@types/chalk": "*",
     "@types/express": "*",
+    "@types/express-graphql": "*",
+    "@types/graphql": "*",
     "@types/node": "*",
     "@types/pg-promise": "*",
-    "@types/chalk": "*",
     "@types/yamljs": "*",
-    "@types/graphql": "*",
+    "chalk": "*",
+    "ts-lint": "*",
     "ts-node": "*",
     "typescript": "*",
-    "chalk": "*",
     "yamljs": "*"
   }
 }
