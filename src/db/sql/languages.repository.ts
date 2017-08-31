@@ -1,8 +1,11 @@
 import { Database } from '../index';
 import {
   existsSQL, indexSQL, findByIdSQL, createSQL, updateSQL, destroySQL,
+} from './languages.sql';
+
+import {
   Language, LanguageInsertParams, LanguageUpdateParams,
-} from '../sql';
+} from './languages.interfaces';
 
 export class LanguageRepository {
 

@@ -1,6 +1,6 @@
-import { LanguageRepository } from './languages.repository';
+import { LanguageRepository } from '../sql';
 
-export * from './languages.repository';
+export * from '../';
 export interface IExtensions {
   languages: LanguageRepository;
 }
