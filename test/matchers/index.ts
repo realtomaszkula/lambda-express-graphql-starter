@@ -1,5 +1,5 @@
-import { toBeOrNotToBe } from './toBeOrNotToBe';
+import { toBeALanguage } from './toBeALanguage';
 
 export const matchers = {
-  toBeOrNotToBe,
+  toBeALanguage,
 };

@@ -25,11 +25,12 @@ SELECT EXISTS(
 const indexSQL = `
   SELECT *
   FROM languages
+  ORDER BY language_id
 `;
 
 const findByIdSQL = `
   SELECT *
-  FROM langauges
+  FROM languages
   WHERE language_id = $1
 `;
 
